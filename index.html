@@ -3,15 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>route-mapper-delight</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.svg" />
+    <title>Route Mapper Delight</title>
+    <meta name="description" content="Route Mapper Application" />
+    <link rel="stylesheet" href="styles.css">
   </head>
-
   <body>
-    <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="container">
+      <div class="content">
+        <div class="address-section">
+          <h2>Điểm bắt đầu:</h2>
+          <div class="search-container">
+            <input 
+              type="text" 
+              id="startAddress" 
+              placeholder="38 Hoàng trọng mậu, Tân hưng, Quận.."
+              class="search-input"
+            >
+            <span class="search-icon">🔍</span>
+            <div class="dropdown" id="startAddressDropdown"></div>
+          </div>
+
+          <div class="separator">⋮</div>
+
+          <h2>Điểm đến:</h2>
+          <div class="search-container">
+            <input 
+              type="text" 
+              id="endAddress" 
+              placeholder="124 Nguyễn Văn Trỗi, Quận 3"
+              class="search-input"
+            >
+            <span class="search-icon">🔍</span>
+            <div class="dropdown" id="endAddressDropdown"></div>
+          </div>
+        </div>
+
+        <div id="routeInfo" class="route-info" style="display: none;">
+          <h2>Thông tin đoạn đường:</h2>
+          <div class="route-details">
+            <div class="distance-duration">
+              <span class="distance">15 km</span>
+              <span class="separator">-</span>
+              <span class="duration">0 giờ 56 phút 25 giây</span>
+            </div>
+            <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
